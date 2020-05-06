@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "news_parser"
+version = "0.1.0"
+description = ""
+authors = ["George Parhomenko <per4ik35@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.8.0"
+Django = "^3.0.5"
+psycopg2 = "^2.8.5"
+djangorestframework = "^3.11.0"
+google-cloud-storage = "^1.28.0"
+django-storages = "^1.9.1"
+pydantic = "^1.5.1"
+pytest = "^5.4.1"
+lxml = "^4.5.0"
+beautifulsoup4 = "^4.9.0"
+python-opengraph = "^0.0.2"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
