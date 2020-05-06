@@ -5,4 +5,4 @@ from news_api.models import Article
 class ArticleSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Article
-        fields = ('label', 'author', 'url', 'created_at')
+        fields = ('title', 'author', 'url', 'image_link', 'created_at')
