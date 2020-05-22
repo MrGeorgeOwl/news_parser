@@ -12,6 +12,13 @@ def article_list(request):
     """
     if request.method == 'GET':
         articles = Article.objects.all()
+        if request.GET.get('amount', 0):
+            amount_articles = int(request.GET.get('amount', 0))
+            sort_articles = request.GET.get('sort_articles', 0)
+            if sort_articles:
+                articles = articles.order_by("-created_at")[:amount_articles]
+            else:
+                articles = articles[:amount_articles]
         serializer = ArticleSerializer(articles, many=True)
         return JsonResponse(serializer.data, safe=False)
 
